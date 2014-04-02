@@ -1,6 +1,15 @@
 ---
 - name: Add PPA for Mono
-  apt_repository: repo=ppa:directhex/monoxide
+  apt_repository: repo='deb http://azure.archive.ubuntu.com/ubuntu/ trusty main'
+
+- name: Add PPA for Mono
+  apt_repository: repo='deb-src http://azure.archive.ubuntu.com/ubuntu/ trusty main'
+    
+- name: Add PPA for Mono
+  apt_repository: repo='deb http://azure.archive.ubuntu.com/ubuntu/ trusty universe'
+
+- name: Add PPA for Mono
+  apt_repository: repo='deb-src http://azure.archive.ubuntu.com/ubuntu/ trusty universe'
  
 - name: Update apt cache
   apt: update_cache=yes
